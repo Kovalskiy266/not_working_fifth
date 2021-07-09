@@ -1,10 +1,11 @@
-$regular: "source_sans_pro_regular";
-$light: "source_sans_pro_light";
+
+// @import "mixin.scss";
+@import "mixin";
+@import "colors";
+
 
 .wrapper{
-    display: grid;
-    min-height: 100%;
-    overflow: hidden;
+    @include wrapper;
 }
 
 .main_container{
@@ -15,6 +16,83 @@ $light: "source_sans_pro_light";
 
 }
 
+.overview_wrapper{
+    @include wrapper;
+    border-bottom: 1px solid red;
+}
+
+
+
+.detalis_wrapper{
+    @include wrapper;
+    padding: 66px 0px 0px 62px;
+
+    // h6{
+    //     @include blue_title;
+    //     letter-spacing: 0.6px;
+    //     line-height: 48px;
+    // }
+    // h1{
+    //    @include title_description;
+    // }
+    // p {
+    //     @include p;
+    //     max-width: 470px;
+    //     width: 100%;
+    //     text-indent: 0;
+    //     margin-top: 23px;
+    //     letter-spacing: 0.25px;
+    // }
+
+    .detalis_description{
+        display: flex;
+        flex-direction: column;
+        padding: 38px 0px 0px 83px;
+        // .line{
+        //     @include line_container;
+        //     .lines{
+        //         @include lines;
+        //     }
+        // }
+        span{
+            color: $black;
+            font-weight: 400;
+            line-height: 36px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 9px;
+        }
+        .energy_img {
+            padding-left: 1.2px;
+        }
+
+}
+}
+
+.second_detalis_wrapper{
+    @include wrapper;
+    padding: 132px 0px 165px 0px;
+    // h6{
+    //     @include blue_title;  
+    // }
+    // h1 {
+    //     @include title_description;
+    // }
+    // .line{
+    //     @include line_container;
+    //     .lines{
+    //         @include lines;
+    //     }
+    // }
+    // p { 
+    //     @include p;
+    // }
+}
+
+
+
 header{
     width: 100%;
     display: flex;
@@ -23,23 +101,22 @@ header{
 }
 
 .logo{
-    color: #ffffff;
+    @include text;
+    font-weight: 700;
+    color: $white;
     font-family: "quicksand_regular";
     font-size: 24px;
-    // height: 18px;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: normal;
     text-align: left;
-    display: flex;
     text-transform: uppercase;
+    display: flex;
     span {
-        margin-top: -2px;
+        margin-top: -4px;
     }
     .u{
         font-style: normal;
         letter-spacing: -2.4px;
         line-height: normal;
+
     }
 
     .l{
@@ -56,17 +133,17 @@ header{
 }
 
 .onepage_theme{
+    margin-top: -1px;
     width: 44px;
     height: 16px;
     opacity: 0.3;
-    font-family: 'source_sans_pro_regular';
     font-size: 9px;
     margin-left: 7px;
     line-height: 10px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: #ffffff;
+    color: $white;
     .onepage {
         font-style: normal;
         letter-spacing: 1.26px;
@@ -79,16 +156,10 @@ nav{
     margin-top: 2px;
     padding-top: 2px;
     padding-right: 0px;
-    color: #fffefe;
-    font-weight: bold;
-    font-size: 9px;
-    font-style: normal;
-    letter-spacing: 0.14em;
+    color: $white_nav;
     ul{
         display: flex;
         margin-left: auto;
-        
-        // vertical-align: top;
     }
     li{
         font-family: 'source_sans_pro_semibold';
@@ -96,20 +167,20 @@ nav{
         list-style-type: none;
         margin-top: -7px;
         margin-left: 23.5px;
-        color: #fffefe;
         font-weight: 400;
         font-style: normal;
         letter-spacing: normal;
         &:hover{
-            border-bottom: 1px solid red;
+            border-bottom: 1px solid $blue;
             top: 100px;
         }     
     }
 }
 .photo{
+    max-height: 640px;
     width: 100%;
     position: absolute;
-}
+} 
 
 .description_header{
     padding-top: 66px;
@@ -117,14 +188,16 @@ nav{
     flex-direction: column;
 }
 
+
 .no-gutter > [class*='col-'] {
     padding-right: 0px;
     padding-left: 0;
     margin-left: 0;
 }
 
+
 body{
-    .wrapper{
+    .wrapper, .overview_wrapper, .detalis_wrapper {
         .main_container{
                 .no-gutter{
                     margin: 0;
@@ -139,19 +212,11 @@ body{
 .header_content{
 
     h6{
-        color: #008ed6;
-        font-family: "source_sans_pro_regular";
-        font-size: 14px;
-        font-weight: 700;
-        font-style: normal;
-        letter-spacing: 1.7px;
-        line-height: 48px;
-        text-align: left;
-        text-transform: uppercase;
+       @include blue_title;
     }
 
     h1{
-        color: #ffffff;
+        color: $white;
         font-family: "source_sans_pro_semibold";
         font-size: 48px;
         font-weight: 600;
@@ -162,15 +227,15 @@ body{
 
     p{
         font-weight: 400;
-        font-size: $regular;
         text-align: left;
         font-size: 18px;
-        margin-top: 20px;
+        margin-top: 13px;
         font-style: normal;
         letter-spacing: normal;
-        color: #999999;
+        color: $gray;
         text-transform: none;
-        letter-spacing: -0.654px;
+        letter-spacing: -0.6712px;
+        
         span {
             display: block;
         }
@@ -181,17 +246,16 @@ body{
 
     .button {
         display: flex;
-        margin-top: 32px;
+        margin-top: 39px;
     }
     .download_button{
         max-width: 160px;
         width: 100%;
-        background-color: #008ed6;
+        background-color: $blue;
         box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
         padding:  16px 0px 13px 0px;
         color: #ffffff;
         font-size: 14px;
-        font-family: $regular;
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
@@ -202,37 +266,71 @@ body{
         max-width: 160px;
         width: 100%;
         text-align: center;
-        padding: 14px 0px 15px 0px;
-        color: #ffffff;
-        font-family: $regular;
+        padding: 15px 0px 12px 0px;
+        color: $white;
         margin-left: 20px;
         font-size: 14px;
         font-weight: 700;
         font-style: normal;
-        letter-spacing: normal;
+        letter-spacing: 0.6px;
         text-transform: uppercase;
         box-sizing: border-box;
 
     }
 }
+// -------------------------------------------------------------
+
 
 main {
     display: flex;
     flex-direction: column;
-    padding-top: 65px;
+    padding-top: 46px;
         .product_overview_container{
+            padding-bottom: 70px;
             span{
-                font-family: $regular;
-                font-size: 14px;
-                line-height: 48px;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                color: #008ed6;
+                @include blue_title;
             }
             text-align: center;
-            .title{
-
+            h1 {
+                font-size: 36px;
+                font-weight: 600;
+                text-transform: none;
+                letter-spacing: normal;
+                color: $black;
             }
         }
+}
+
+.product_element{
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+  
+    .circle {
+        @include circle;
+    }
+    .description_product{
+        h6{
+            color: $black;
+            font-size: 24px;
+            font-family: 'source_sans_pro_regular';
+            margin-top: 31px;
+            line-height: 29px;
+        }
+        @include text;
+       
+        p{
+            max-width: 229px;
+            width: 100%;
+            margin: 0 auto;
+            @include p;           
+        }
+
+    }
+}
+.left {
+    margin-right: 6.5px;
+}
+.right {
+    margin-left: 6px;
 }
