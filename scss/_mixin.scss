@@ -1,3 +1,4 @@
+@import "colors";
 @mixin text {
     // font-weight: 700;
     // font-style: normal;
@@ -40,57 +41,16 @@
     
 }
 
-// @mixin blue_title {
-//     color: $blue;
-//     font-size: 14px;
-//     font-weight: 700;
-//     font-style: normal;
-//     letter-spacing: 1.7px;
-//     line-height: 48px;
-//     text-align: left;
-//     text-transform: uppercase;
-// }
-
-// @mixin line_container {
-//     position: relative;
-//     flex-direction: row;
-//     display: flex;
-//     justify-content: space-between;
-//     margin-top: 28px;
-//     width: 40px;
-// }
-
-// @mixin lines {
-//     width: 19px;
-//     display: flex;
-//     border-bottom: 2px solid $blue;
-// }
-// @mixin p {
-//     font-family: "source_sans_pro_light";
-//     line-height: 26px;
-//     letter-spacing: 0.21px;
-//     color: brown;
-//     text-indent: -4.1px;   
-//     font-size: 18px; 
-// }
-
-// @mixin title_description {
-//     font-size: 36px;
-//     font-weight: 600px;
-//     color: $black;
-//     letter-spacing: -1.5px; 
-//     line-height: 20px;
-// }
-
-@mixin description {
-    .title_description {
+@mixin title_description {
         font-size: 36px;
-        font-weight: 600px;
         color: $black;
-        letter-spacing: -1.5px; 
+        letter-spacing: 0px; 
         line-height: 20px;
+        font-family:  "source_sans_pro_semibold";
     }
-    p {
+
+
+@mixin p {
         font-family: "source_sans_pro_light";
         line-height: 26px;
         letter-spacing: 0.21px;
@@ -99,29 +59,62 @@
         font-size: 18px; 
     }
 
-    .lines {
-        width: 19px;
+
+@mixin lines {
+        width: 20px;
         display: flex;
         border-bottom: 2px solid $blue;
     }
 
-    .line_container {
+@mixin line_container {
         position: relative;
         flex-direction: row;
         display: flex;
         justify-content: space-between;
         margin-top: 28px;
-        width: 40px;
+        width: 42px;
+        padding: 0px;
     }
-}
 
-.blue_title {
+@mixin blue_title {
     color: $blue;
     font-size: 14px;
     font-weight: 700;
-    font-style: normal;
     letter-spacing: 1.7px;
-    line-height: 48px;
-    text-align: left;
+    line-height: 48px;  
     text-transform: uppercase;
+    font-family:  'source_sans_pro_regular';
+}
+
+@mixin download_button {
+    background-color: $blue;
+    box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
+    // padding: 15px 22px 0px 23px;
+    // padding: 15px 22px 0px 16px;
+    padding: 15px 30px 0px 28px;
+    // box-sizing: border-box;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    // text-align: center;
+    text-transform: uppercase;
+    font-family:  'source_sans_pro_regular';
+}
+
+@mixin view_button {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        // text-align: center;
+        // padding: 20px 31px 0px 31px;
+        // padding: 20px 31px 8px 10px;
+        padding: 14px 31px 13px 27px;
+        color: $white;
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        font-family:  'source_sans_pro_regular';
+        // border: 1px solid rgba(255, 255, 255, 0.2);
 }

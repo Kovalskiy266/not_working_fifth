@@ -6,10 +6,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link href="fonts/stylesheet.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src = "js/slick.min.js"></script>
+    <script src = "js/script.js"></script>
+
 </head>
 <body>
     
@@ -64,30 +70,29 @@
                 </div>
                 </div>
 
-                <!----------Контетна частина-----s-------->
-                <div class="overview_wrapper">
-                    <div class="main_container">
-                        <main>
-                        <!-------- -Product overview ----------->
-                            <div class="row product_overview_container">
-                                <div class="col title">
-                                    <span>product overview</span>
-                                    <h1>List of amazing features</h1>
-                                </div>
+<!----------Контетна частина-----s-------->
+<div class="overview_wrapper">
+    <div class="main_container">
+        <main>
+        <!-------- -Product overview ----------->
+            <div class="row product_overview_container">
+                <div class="col title">
+                    <span>product overview</span>
+                    <h1>List of amazing features</h1>
+                </div>
  
-                            <div class="row no-gutter">
-                                <!-- ----------------------------------------- -->
-                                <div class=" col-3 product_element">
-                                    <div class="circle left">
-                                    <img src="images/icons/Monitor.png" alt="">
-                                </div>
-                                <div class="description_product">
-                                    <h6>Responsive</h6>
-                                    <p class="text">Fusce fermentum placerat magna&nbsp;ac pharetra. Aliquam&nbsp; euismod elit non ipsum lacinia consectetur.</p>
-                                </div>   
-                                </div>
-                                <!-- ----------------------------------------- -->
-                                
+                <div class="row no-gutter">
+                    <!-- ----------------------------------------- -->
+                        <div class=" col-3 product_element">
+                            <div class="circle left">
+                                <img src="images/icons/Monitor.png" alt="">
+                            </div>
+                            <div class="description_product">
+                                <h6>Responsive</h6>
+                                <p class="text">Fusce fermentum placerat magna&nbsp;ac pharetra. Aliquam&nbsp; euismod elit non ipsum lacinia consectetur.</p>
+                            </div>   
+                        </div>
+                        <!-- ----------------------------------------- -->
                                 <div class="col-3 product_element">
                                     <div class="circle">
                                     <img src="images/icons/Settings.png" alt="">
@@ -148,16 +153,139 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ---------------Третя частина контенту------------------ -->
 
-
-
-                <img src="" alt="">
-            </div>
-            </div>
+                    <!---------------Третя частина контенту------------------->
+                    <div class="detalis_wrapper background left_wrapper">
+                        <div class="main_container">
+                            <div class="row no-gutter thirth_part">
+                                <div class="col-5 second_detalis_description">
+                                    <h6>dip into the details</h6>
+                                    <h1>Super easy to <span>customize</span></h1>
+                                    <div class="line">
+                                        <span class="lines"></span><span class="lines"></span>
+                                    </div>
+                                    <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt <span>auctor a ornare odio. Sed non  mauris vitae erat consequat</span> auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                </div>
+                                <div class="col-7 no-gutter">
+                                    <img src="images/thirth_device.png" alt="" title="">
+                                </div>
 
     
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- --------------slider------------------>
+                    <div class="slider_wrapper">
+                        <div class="main_container">
+                            <div class="slider_container">
+                                <!-- ----------title-------------- -->
+                                <div class="row title_slider">
+                                    <h6>quality has its price</h6>
+                                    <h1>Pricings & Plans</h1>
+                                    <div class="line">
+                                        <span class="lines"></span><span class="lines"></span>
+                                    </div>
+                                </div>
+                                <!-----------this is a slider-------------->
+                                <div class="row slider">
+                                    <div class="col-6 slide">
+                                        <p>Once upon a time all the Rivers combined to protest against the action of the Sea in making their waters salt. “When we come to you,” said they to the Sea.</p>
+                                        <div class="author">
+                                            <img src="images/icons/john_doe.png" alt="">   
+                                            <span>John Doe<span class="name">CEO, THE RIVERS COMPANY</span></span>    
+                                        </div>
+                                    </div>
+                                    <div class="col-6 slide second_slide">
+                                            <p>A shoe is not only a design, but it's a part of your body language, the way you walk. The way you're going to move is quite dictated by your shoes.</p>
+                                            <div class="author">
+                                                <img src="images/icons/dean_winchester.png" alt="" title="">
+                                                <span>Dean Winchester<span class="name">UX DESIGNER, GOOGLE INC.</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                 
+                        </div>
+                    </div>
 
+<!-- ------------------------------------- -->
+<div class="addition_slider_wrapper">
+    <div class="main_container">
+        <div class="addition_slider_content">
+            <span>Like what you see?</span>
+            <span class="get_theme">Get this great theme now!</span>
+            <div class="button_container">
+                <div class="view_button">view features</div>
+                <div class="download_button">download now</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------------------- -->
+<div class="wrapper">
+    <div class="main_container">
+        <div class="row price_list_container">
+        <div class="col title">
+            <h6>quality has its price</h6>
+            <h1>Pricings & Plans</h1>
+            <div class="line">
+                <span class="lines"></span><span class="lines"></span>
+            </div>
+        </div>
+            <div class="row content">
+                <div class="col-3">
+                    <div class="price_list_element">
+                        <div class="type">free</div>
+                        <div class="price">
+                            <div>
+                                <sup class="dollars">$</sup><span class="number">0</span>
+                                </div>
+                            <span class="inscription">/per month</span>
+                        </div>
+                        <div class="description">
+                            <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
+                            <div class="order_button">order now</div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class ="price_list_element compare">
+                        <div class="price_list_element">
+                            <div class="type">personal</div>
+                            <div class="price">
+                                <div>
+                                    <sup class="dollars">$</sup><span class="number">25</span>
+                                    </div>
+                                <span class="inscription">/per month</span>
+                            </div>
+                            <div class="description">
+                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
+                                <div class="order_button">order now</div>   
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <div class="col-3">
+                    <div class ="price_list_element compare">
+                        <div class="price_list_element">
+                            <div class="type">business</div>
+                            <div class="price">
+                                <div>
+                                    <sup class="dollars">$</sup><span class="number">50</span>
+                                    </div>
+                                <span class="inscription">/per month</span>
+                            </div>
+                            <div class="description">
+                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
+                                <div class="order_button">order now</div>   
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <div class="col-3 price_list_element"></div>
 
+            </div>
+        </div>
+    </div>
+</div>
 </body>

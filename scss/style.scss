@@ -1,9 +1,8 @@
 
-// @import "mixin.scss";
 @import "mixin";
 @import "colors";
 
-
+body{overflow-x: hidden}
 .wrapper{
     @include wrapper;
 }
@@ -21,39 +20,36 @@
     border-bottom: 1px solid red;
 }
 
-
-
 .detalis_wrapper{
     @include wrapper;
     padding: 66px 0px 0px 62px;
-
-    // h6{
-    //     @include blue_title;
-    //     letter-spacing: 0.6px;
-    //     line-height: 48px;
-    // }
-    // h1{
-    //    @include title_description;
-    // }
-    // p {
-    //     @include p;
-    //     max-width: 470px;
-    //     width: 100%;
-    //     text-indent: 0;
-    //     margin-top: 23px;
-    //     letter-spacing: 0.25px;
-    // }
-
+    h6{
+        @include blue_title;
+        letter-spacing: 0.6px;
+        line-height: 48px;
+    }
+    h1{
+       @include title_description;
+    }
+    p {
+        @include p;
+        max-width: 470px;
+        width: 100%;
+        text-indent: 0;
+        margin-top: 23px;
+        letter-spacing: 0.25px;
+    }
+    
     .detalis_description{
         display: flex;
         flex-direction: column;
         padding: 38px 0px 0px 83px;
-        // .line{
-        //     @include line_container;
-        //     .lines{
-        //         @include lines;
-        //     }
-        // }
+        .line{
+            @include line_container;
+            .lines{
+                @include lines;
+            }
+        }
         span{
             color: $black;
             font-weight: 400;
@@ -67,31 +63,39 @@
         .energy_img {
             padding-left: 1.2px;
         }
+    }
+
+    .second_detalis_description{
+        padding: 70px 0px 0px 11.5px;
+        .line{
+            @include line_container;
+            margin-top: 37px;
+            .lines{
+                @include lines;
+            }
+        }
+        span{
+            letter-spacing: 0.4px;
+        };
+        p {
+            span{
+                letter-spacing: 0.35px;
+                }
+        }
+    }
+    .thirth_part{
+        padding: 33px 0px 19px 0px;
+        img {
+            margin-top: -10px;
+            margin-left: -16px;
+        }
+    }
 
 }
+
+.left_wrapper{
+    padding: 33px 0px 0px 0px;
 }
-
-.second_detalis_wrapper{
-    @include wrapper;
-    padding: 132px 0px 165px 0px;
-    // h6{
-    //     @include blue_title;  
-    // }
-    // h1 {
-    //     @include title_description;
-    // }
-    // .line{
-    //     @include line_container;
-    //     .lines{
-    //         @include lines;
-    //     }
-    // }
-    // p { 
-    //     @include p;
-    // }
-}
-
-
 
 header{
     width: 100%;
@@ -188,13 +192,11 @@ nav{
     flex-direction: column;
 }
 
-
 .no-gutter > [class*='col-'] {
     padding-right: 0px;
     padding-left: 0;
     margin-left: 0;
 }
-
 
 body{
     .wrapper, .overview_wrapper, .detalis_wrapper {
@@ -248,38 +250,8 @@ body{
         display: flex;
         margin-top: 39px;
     }
-    .download_button{
-        max-width: 160px;
-        width: 100%;
-        background-color: $blue;
-        box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
-        padding:  16px 0px 13px 0px;
-        color: #ffffff;
-        font-size: 14px;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    .view_button{
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        max-width: 160px;
-        width: 100%;
-        text-align: center;
-        padding: 15px 0px 12px 0px;
-        color: $white;
-        margin-left: 20px;
-        font-size: 14px;
-        font-weight: 700;
-        font-style: normal;
-        letter-spacing: 0.6px;
-        text-transform: uppercase;
-        box-sizing: border-box;
-
-    }
 }
 // -------------------------------------------------------------
-
 
 main {
     display: flex;
@@ -299,6 +271,14 @@ main {
                 color: $black;
             }
         }
+}
+
+.download_button{
+    @include download_button;
+}
+
+.view_button{
+   @include view_button;
 }
 
 .product_element{
@@ -334,3 +314,134 @@ main {
 .right {
     margin-left: 6px;
 }
+.background{
+    background-color: $gray;
+}
+
+.addition_slider_wrapper{
+    width: 100%;
+    background-color: #15141a;
+    padding: 60px 0px 50px 0px;
+    margin-top: -1px;
+    .addition_slider_content{
+        display: flex;
+        span{
+            padding: 14px 0px 6px 0px;
+            @include title_description;
+            float: left;
+            color: $white;
+        }
+        .get_theme {
+            font-weight:300;
+            font-family: "source_sans_pro_light";
+            text-indent: 10px;
+        }
+        .button_container{
+            margin-left: auto;
+            display: flex;
+            padding-bottom: 10px;
+        }
+        .view_button{
+            margin: 0px 20px 0px 0px;
+        }
+}
+}
+
+.price_list_container{
+    // padding: 42px 0;
+    .title {
+        padding: 42px 0px 70px;
+        text-align: center;
+        h6{
+            @include blue_title;
+        }
+        h1{
+            @include title_description; 
+        }
+        .line{
+            @include line_container;
+            // margin: 0 auto;
+            margin: 39px auto 0px auto;
+            .lines{
+                @include lines;
+            }
+        }
+    }
+
+    .price_list_element{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .type{
+            padding: 19px 0px 15px;
+            color: $black;
+            font-family:'source_sans_pro_regular';
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            border: 1px solid red;
+            text-transform: uppercase;
+        }
+        .price {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 18px 0px 29px;
+            border: 1px solid red;  
+            border-top-style: none;    
+            .dollars {
+                font-family: 'source_sans_pro_semibold'; 
+                font-size: 34px;
+                line-height: 20px;
+                font-weight: 600;
+                color: $black;
+            }
+            .number{
+                font-size: 60px;
+                font-family: 'source_sans_pro_semibold'; 
+                margin-right: 5px;
+            }
+            .inscription {
+                font-size: 18px;
+                margin-top: -15px;
+                font-weight: 400;
+                color: $gray;
+                font-family: 'source_sans_pro_regular'; 
+
+            }
+        }
+        
+        .description{
+            border: 1px solid red;
+            border-top-style: none;  
+            p {
+                @include text;
+                line-height: 26px;
+                span {
+                    color: $blue;
+                }
+            }       
+            padding: 47px 34px 29px 35px;
+            text-align: center;
+            .order_button{
+                @include view_button;
+                max-width: 160px;
+                width: 100%;
+                border: 1px solid $strong_lite_gray;
+                color: $blue;
+                margin: 40px auto 0px;
+                text-indent: 2px;
+                 
+            }
+            }
+        }
+        .compare{
+            margin-left: 8px;
+            .description {
+                padding-left: 40px;
+                padding-right: 29px;
+            }
+        }
+
+    }

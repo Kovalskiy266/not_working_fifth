@@ -14,6 +14,17 @@
 
 }
 
+@font-face {
+    font-family: 'source_sans_pro_italic';
+    src: url('source_open/sourcesanspro-italic-webfont.eot');
+    src: url('source_open/sourcesanspro-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('source_open/sourcesanspro-italic-webfont.woff2') format('woff2'),
+         url('source_open/sourcesanspro-italic-webfont.woff') format('woff'),
+         url('source_open/sourcesanspro-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
 
 @font-face {
     font-family: 'source_sans_pro_regular';

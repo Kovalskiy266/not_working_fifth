@@ -1,0 +1,155 @@
+@import "mixin";
+/* Слайдер */
+.slick-slider{
+    display: flex;
+}
+/* Слайдер запущен */
+.slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+}
+// .slider .slick-dots ul{
+//     width: 100%;
+// }
+.slider .slick-dots li{
+    list-style-type: none;
+    width: 8px;
+}
+/* Активная точка */
+.slider .slick-dots li .slick-active{
+    list-style-type: none;
+    // width: 14px;
+    // height: 14px;
+    // margin-top: 100px;
+}
+/* Элемент точки */
+.slider .slick-dots button{
+    text-align: center;
+    width: 4px;
+    height: 8px;
+    border-radius: 50%;
+    font-size: 0;
+    // border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #ffffff;
+}
+
+
+
+.slider_wrapper{
+    background-image: url("../images/slider.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include wrapper;
+    // height: 640px;
+    .slider_container {
+        padding: 46px 0px 60px 0px;
+        height: 640px;
+        .title_slider{
+            text-align: center;
+            h6{
+                @include blue_title;
+            }
+            h1{
+                @include title_description; 
+                color: $white; 
+            }
+            .line{
+                @include line_container;
+                margin: 30.4px auto 0px auto;
+                .lines{
+                    @include lines;
+                }
+            }
+        }
+    }
+    .slider{
+        max-width: 1170px;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        display: block;
+        padding-top: 86px;
+        padding-bottom: 60px;
+        display: flex;
+        height: 100%;
+        // max-height: 640px;
+        // height: 100%;
+        // margin: 0 auto;
+        .slide{
+            // overflow: hidden;
+            margin-right: auto;
+            // word-break: break-all;
+            p{
+                font-size: 24px;
+                font-weight: 400;
+                color: $white;
+                line-height: 32px;
+                text-align: left;
+                font-family: 'source_sans_pro_italic';
+            }
+        }
+        .author{
+            display: flex;
+            margin-top: 22px;
+            // margin-bottom: 140px;
+            span{
+                padding: 4px 0px 0px 24px;
+                color: $white;
+                font-family: "source_sans_pro_regular";
+                font-size: 16px;
+                font-weight: 400;
+                display: flex;
+                flex-direction: column;
+                .name{
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 5px 0px 0px 0px;
+                    letter-spacing: 0.4px;
+    
+                }
+            }
+        }
+    }
+
+    .second_slide{
+        padding-left: 24px;
+        .author{
+            span {
+                padding-left: 27px;
+            }
+    }
+}
+}
+
+
+
