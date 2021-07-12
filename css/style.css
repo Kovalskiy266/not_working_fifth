@@ -426,6 +426,9 @@ main .product_overview_container h1 {
   margin: 0px 20px 0px 0px;
 }
 
+.price_list_container {
+  padding-bottom: 59px;
+}
 .price_list_container .title {
   padding: 42px 0px 70px;
   text-align: center;
@@ -464,7 +467,6 @@ main .product_overview_container h1 {
 .price_list_container .price_list_element {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .price_list_container .price_list_element .type {
   padding: 19px 0px 15px;
@@ -543,9 +545,130 @@ main .product_overview_container h1 {
   text-indent: 2px;
 }
 .price_list_container .compare {
-  margin-left: 8px;
+  padding: 0px 12px;
 }
-.price_list_container .compare .description {
-  padding-left: 40px;
-  padding-right: 29px;
+
+.contact_us_wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  background-color: #ededed;
+  padding-top: 40px;
+}
+.contact_us_wrapper .title {
+  text-align: center;
+}
+.contact_us_wrapper .title h6 {
+  color: #008ed6;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-family: "source_sans_pro_regular";
+}
+.contact_us_wrapper .title h1 {
+  font-size: 36px;
+  color: #1a1a1a;
+  letter-spacing: 0px;
+  line-height: 20px;
+  font-family: "source_sans_pro_semibold";
+}
+.contact_us_wrapper .title .line {
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  width: 42px;
+  padding: 0px;
+  margin: 39px auto 0px auto;
+}
+.contact_us_wrapper .title .line .lines {
+  width: 20px;
+  display: flex;
+  border-bottom: 2px solid #008ed6;
+}
+.contact_us_wrapper .contact_element {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.contact_us_wrapper .contact_element span {
+  font-family: "source_sans_pro_regular";
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #999999;
+}
+.contact_us_wrapper .phone_element {
+  margin: 0 auto;
+  padding: 58px 0px 0px 4px;
+}
+.contact_us_wrapper .phone_element img {
+  width: 18px;
+  height: 32px;
+  margin: 0px auto 30px;
+}
+.contact_us_wrapper .pointer_element {
+  margin: 0 auto;
+  padding: 58px 0px 0px 24px;
+}
+.contact_us_wrapper .pointer_element img {
+  width: 24px;
+  height: 32px;
+  margin: 0px auto 30px;
+}
+.contact_us_wrapper .mail_element {
+  margin: 0 auto;
+  padding: 63px 0px 0px 42px;
+}
+.contact_us_wrapper .mail_element img {
+  width: 32px;
+  height: 22px;
+  margin: 0px auto 30px;
+}
+.contact_us_wrapper .mail_element span {
+  text-indent: -25px;
+  padding-top: 2px;
+}
+.contact_us_wrapper .form_container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  margin-left: 9px;
+  margin-top: 10px;
+}
+.contact_us_wrapper .form_container form {
+  max-width: 770px;
+  width: 100%;
+  background-color: #15141a;
+  padding: 37px 95px 40px 66px;
+  color: #be8686;
+  display: flex;
+}
+.contact_us_wrapper .form_container form .compare {
+  margin-left: 19px;
+  height: 190px;
+}
+.contact_us_wrapper .form_container form input {
+  width: 300px;
+  background-color: #15141a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 13px 18px 10px 18px;
+  margin-top: 21.7px;
+}
+.contact_us_wrapper .form_container form input::placeholder {
+  opacity: 0.2;
+  color: #ffffff;
+  font-family: "source_sans_pro_regular";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.colr {
+  background-color: green;
 }

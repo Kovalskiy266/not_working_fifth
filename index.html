@@ -224,7 +224,7 @@
 <!---------------------------------------------------- -->
 <div class="wrapper">
     <div class="main_container">
-        <div class="row price_list_container">
+        <div class="row price_list_container colr">
         <div class="col title">
             <h6>quality has its price</h6>
             <h1>Pricings & Plans</h1>
@@ -232,8 +232,9 @@
                 <span class="lines"></span><span class="lines"></span>
             </div>
         </div>
-            <div class="row content">
-                <div class="col-3">
+        <!-- -------------------------------------------------- -->
+            <div class="row content no-gutter">
+                <div class="col-3 compare">
                     <div class="price_list_element">
                         <div class="type">free</div>
                         <div class="price">
@@ -248,9 +249,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class ="price_list_element compare">
-                        <div class="price_list_element">
+                 <!-- -------------------------------------------------->
+                <div class="col-3 compare">
+                    <div class ="price_list_element">
+                        <!-- <div class="price_list_element"> -->
                             <div class="type">personal</div>
                             <div class="price">
                                 <div>
@@ -264,10 +266,12 @@
                             </div>
                         </div>
                 </div>
-                </div>
+                
+
+                 <!-- -------------------------------------------------->
                 <div class="col-3">
                     <div class ="price_list_element compare">
-                        <div class="price_list_element">
+                        <!-- <div class="price_list_element"> -->
                             <div class="type">business</div>
                             <div class="price">
                                 <div>
@@ -281,9 +285,83 @@
                             </div>
                         </div>
                 </div>
+                
+                 <!-- -------------------------------------------------->
+                 <div class="col-3">
+                    <div class="price_list_element compare">
+                        <div class="type">ultimate</div>
+                        <div class="price">
+                            <div>
+                                <sup class="dollars">$</sup><span class="number">99</span>
+                                </div>
+                            <span class="inscription">/per month</span>
+                        </div>
+                        <div class="description">
+                            <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
+                            <div class="order_button">order now</div>   
+                        </div>
+                    </div>
                 </div>
-                <div class="col-3 price_list_element"></div>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact_us_wrapper">
+    <div class="main_container">
+        <div class="row contact_us_container">
+            <div class="col title">
+                <h6>stay in touch</h6>
+                <h1>Contact us</h1>
+                <div class="line">
+                    <span class="lines"></span><span class="lines"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 no-gutter">
+                    <div class="col-6 contact_element phone_element">
+                        <img src="images/icons/Phone.png" alt="" title="" class="phone">
+                        <span>Phone: (415) 124-5678</span>
+                        <span>Fax: (412) 123-8290</span>
+
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-6 contact_element pointer_element">
+                        <img src="images/icons/Pointer.png" alt="" title="" class="pointer">
+                        <span>1001 Brickell Bay Dr.</span>
+                        <span>Suite 1900</span>
+                        <span>Miami, FL 33131</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-6 contact_element mail_element">
+                        <img src="images/icons/Envelope.png" alt="" title="" class="mail">
+                        <span>support@yourname.com</span>
+                    </dіiv>
+                </div>
+            </div>
+
+            <div class="row form_container no-gutter">
+                <!-- <div class="col-12"> -->
+                    <div class="col-8">
+                        <form>
+
+                            <div>
+                                <input type="text" placeholder = "name*" name="first_name" class="input">
+                                <input type="email" placeholder = "email*" name="email" class="input">
+                                <input type="text" placeholder = "subject*" name="subject" class="input"> 
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder = "message*" name="first_name" class="input compare">
+                            </div> 
+                        </form>
+                    </div>  
+
+                <!-- </div> -->
             </div>
         </div>
     </div>
