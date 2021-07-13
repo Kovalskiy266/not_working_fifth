@@ -1,20 +1,25 @@
 @import "mixin";
 /* Слайдер */
-.slick-slider{
+ .slick-slider{
     display: flex;
+    // overflow: hidden;
 }
 /* Слайдер запущен */
 .slider.slick-initialized{}
 /* Слайдер с точками */
 .slick-slider.slick-dotted{}
 /* Ограничивающая оболочка */
-.slick-list {}
+.slider .slick-list {
+    padding: 0px;
+}
 /* Лента слайдов */
 .slick-track{
     display: flex;
 }
 /* Слайд */
-.slick-slide{}
+.slick-slide{
+    // width: 50%;
+}
 /* Слайд активный (показывается) */
 .slick-slide.slick-active{}
 /* Слайд основной */
@@ -38,30 +43,55 @@
     justify-content: center; 
     width: 100%;
 }
+
+.slick-dots{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+    margin-top: 131px;
+    width: 137px;
+    button{
+      font-size: 0;
+      width: 8px;
+      height: 8px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0;
+    }
+    .slick-active button{
+      background-color: #ffffff;
+      width: 13px;
+      height: 13px;
+      border: 0;
+    }
+  }
 // .slider .slick-dots ul{
 //     width: 100%;
 // }
-.slider .slick-dots li{
-    list-style-type: none;
-    width: 8px;
-}
-/* Активная точка */
-.slider .slick-dots li .slick-active{
-    list-style-type: none;
-    // width: 14px;
-    // height: 14px;
-    // margin-top: 100px;
-}
-/* Элемент точки */
-.slider .slick-dots button{
-    text-align: center;
-    width: 4px;
-    height: 8px;
-    border-radius: 50%;
-    font-size: 0;
-    // border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: #ffffff;
-}
+// .slider .slick-dots li{
+//     list-style-type: none;
+//     width: 8px;
+// }
+// /* Активная точка */
+// .slider .slick-dots li .slick-active{
+//     list-style-type: none;
+//     // width: 14px;
+//     // height: 14px;
+//     // margin-top: 100px;
+// }
+// /* Элемент точки */
+// .slider .slick-dots button{
+//     text-align: center;
+//     width: 4px;
+//     height: 8px;
+//     border-radius: 50%;
+//     font-size: 0;
+//     // border: 1px solid rgba(255, 255, 255, 0.2);
+//     background-color: #ffffff;
+// }
 
 
 
@@ -70,10 +100,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include wrapper;
-    // height: 640px;
+    overflow: hidden;
+    overflow-x: hidden;
     .slider_container {
         padding: 46px 0px 60px 0px;
         height: 640px;
+        width: 100%;
+        overflow: hidden;
         .title_slider{
             text-align: center;
             h6{
@@ -91,27 +124,40 @@
                 }
             }
         }
+        .row{margin-left: 0px;}
     }
     .slider{
-        max-width: 1170px;
-        overflow: hidden;
-        width: 100%;
+        width: 1170px;
         position: relative;
-        display: block;
+        overflow-x: hidden;
         padding-top: 86px;
         padding-bottom: 60px;
         display: flex;
         height: 100%;
-        // max-height: 640px;
-        // height: 100%;
-        // margin: 0 auto;
+        justify-content: center;
+        box-sizing: border-box;
+
+        .slick-track {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+        .slick-list{
+            // overflow-x: hidden;
+        }
+
         .slide{
-            // overflow: hidden;
-            margin-right: auto;
-            // word-break: break-all;
+
+            width: 100%;
             p{
+                max-width: 560px;
+                width: 100%;
                 font-size: 24px;
                 font-weight: 400;
+                margin-left: -12px;
                 color: $white;
                 line-height: 32px;
                 text-align: left;
@@ -121,7 +167,9 @@
         .author{
             display: flex;
             margin-top: 22px;
-            // margin-bottom: 140px;
+            overflow: hidden;
+            width: 50%;
+            margin-left: -3px;
             span{
                 padding: 4px 0px 0px 24px;
                 color: $white;
@@ -139,17 +187,19 @@
                 }
             }
         }
-    }
-
-    .second_slide{
-        padding-left: 24px;
-        .author{
-            span {
-                padding-left: 27px;
+        .second_slide{
+            width: 100%;
+            p{
+                margin: 0px;
             }
+            .author{
+                span {
+                    padding-left: 27px;
+                }
+        }
+        
     }
 }
 }
-
 
 

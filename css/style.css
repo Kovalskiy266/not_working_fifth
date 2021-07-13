@@ -26,7 +26,7 @@ body {
   width: 100%;
   overflow: hidden;
   display: grid;
-  padding: 66px 0px 0px 62px;
+  padding: 65px 0px 0px 64px;
 }
 .detalis_wrapper h6 {
   color: #008ed6;
@@ -36,8 +36,9 @@ body {
   line-height: 48px;
   text-transform: uppercase;
   font-family: "source_sans_pro_regular";
-  letter-spacing: 0.6px;
+  letter-spacing: 1.7px;
   line-height: 48px;
+  font-size: 14px;
 }
 .detalis_wrapper h1 {
   font-size: 36px;
@@ -56,13 +57,13 @@ body {
   max-width: 470px;
   width: 100%;
   text-indent: 0;
-  margin-top: 23px;
-  letter-spacing: 0.25px;
+  margin-top: 25px;
+  letter-spacing: 0.29px;
 }
 .detalis_wrapper .detalis_description {
   display: flex;
   flex-direction: column;
-  padding: 38px 0px 0px 83px;
+  padding: 33px 0px 0px 83px;
 }
 .detalis_wrapper .detalis_description .line {
   position: relative;
@@ -83,16 +84,27 @@ body {
   font-weight: 400;
   line-height: 36px;
 }
+.detalis_wrapper .detalis_description span span {
+  margin-left: 10px;
+  font-family: "source_sans_pro_regular";
+  font-size: 18px;
+}
 .detalis_wrapper .detalis_description div {
   display: flex;
   flex-direction: column;
   margin-top: 9px;
 }
+.detalis_wrapper .detalis_description img {
+  margin-bottom: 4px;
+}
 .detalis_wrapper .detalis_description .energy_img {
   padding-left: 1.2px;
 }
+.detalis_wrapper .detalis_description .mouse_img {
+  margin: 0px 0px 2px 2.6px;
+}
 .detalis_wrapper .second_detalis_description {
-  padding: 70px 0px 0px 11.5px;
+  padding: 65px 0px 0px 11.5px;
 }
 .detalis_wrapper .second_detalis_description .line {
   position: relative;
@@ -102,7 +114,7 @@ body {
   margin-top: 28px;
   width: 42px;
   padding: 0px;
-  margin-top: 37px;
+  margin-top: 39px;
 }
 .detalis_wrapper .second_detalis_description .line .lines {
   width: 20px;
@@ -112,14 +124,17 @@ body {
 .detalis_wrapper .second_detalis_description span {
   letter-spacing: 0.4px;
 }
+.detalis_wrapper .second_detalis_description p {
+  margin-top: 23px;
+}
 .detalis_wrapper .second_detalis_description p span {
   letter-spacing: 0.35px;
 }
 .detalis_wrapper .thirth_part {
-  padding: 33px 0px 19px 0px;
+  padding: 33px 0px 20px 0px;
 }
 .detalis_wrapper .thirth_part img {
-  margin-top: -10px;
+  margin-top: -15px;
   margin-left: -16px;
 }
 
@@ -175,7 +190,7 @@ header {
   height: 16px;
   opacity: 0.3;
   font-size: 9px;
-  margin-left: 7px;
+  margin-left: 5px;
   line-height: 10px;
   font-weight: 400;
   text-transform: uppercase;
@@ -184,7 +199,7 @@ header {
 }
 .onepage_theme .onepage {
   font-style: normal;
-  letter-spacing: 1.26px;
+  letter-spacing: 0.6px;
   line-height: normal;
 }
 
@@ -208,10 +223,31 @@ nav li {
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
+  position: relative;
 }
-nav li:hover {
-  border-bottom: 1px solid #008ed6;
-  top: 100px;
+nav li:hover::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #008ed6;
+  position: absolute;
+  text-align: center;
+  left: 32%;
+  margin-top: 31px;
+  transform: translate(-11px);
+}
+nav li:hover::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #008ed6;
+  position: absolute;
+  text-align: center;
+  left: 32%;
+  transform: translate(11px);
+  margin-top: 7px;
 }
 
 .photo {
@@ -264,8 +300,9 @@ body .wrapper .main_container .no-gutter, body .overview_wrapper .main_container
   font-style: normal;
   letter-spacing: normal;
   color: #999999;
+  font-family: "source_sans_pro_regular";
   text-transform: none;
-  letter-spacing: -0.6712px;
+  letter-spacing: 0px;
 }
 .header_content p span {
   display: block;
@@ -276,7 +313,21 @@ body .wrapper .main_container .no-gutter, body .overview_wrapper .main_container
 }
 .header_content .button {
   display: flex;
-  margin-top: 39px;
+  margin-top: 41px;
+}
+.header_content .view_button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 31px 13px 27px;
+  color: #ffffff;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  font-family: "source_sans_pro_regular";
+  text-indent: 2.3px;
 }
 
 main {
@@ -299,10 +350,27 @@ main .product_overview_container span {
 }
 main .product_overview_container h1 {
   font-size: 36px;
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: normal;
   color: #1a1a1a;
+  letter-spacing: 0px;
+  line-height: 20px;
+  font-family: "source_sans_pro_semibold";
+  margin-top: 7px;
+  margin-left: -1px;
+}
+main .product_overview_container .line {
+  position: relative;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  width: 42px;
+  padding: 0px;
+  margin: 45px auto 0px;
+}
+main .product_overview_container .line .lines {
+  width: 20px;
+  display: flex;
+  border-bottom: 2px solid #008ed6;
 }
 
 .download_button {
@@ -333,7 +401,7 @@ main .product_overview_container h1 {
 .product_element {
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
+  padding-top: 70px;
 }
 .product_element .circle {
   width: 89px;
@@ -372,13 +440,16 @@ main .product_overview_container h1 {
 .product_element .description_product p {
   max-width: 229px;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto 0px;
   font-family: "source_sans_pro_light";
   line-height: 26px;
   letter-spacing: 0.21px;
   color: brown;
   text-indent: -4.1px;
   font-size: 18px;
+}
+.product_element .description_product .compare {
+  text-indent: 2px;
 }
 
 .left {
@@ -549,11 +620,14 @@ main .product_overview_container h1 {
 }
 
 .contact_us_wrapper {
+  position: relative;
   width: 100%;
   overflow: hidden;
   display: grid;
   background-color: #ededed;
   padding-top: 40px;
+  padding-bottom: 361px;
+  z-index: -1000;
 }
 .contact_us_wrapper .title {
   text-align: center;
@@ -633,34 +707,46 @@ main .product_overview_container h1 {
   text-indent: -25px;
   padding-top: 2px;
 }
-.contact_us_wrapper .form_container {
-  position: absolute;
+
+.colr {
+  background-color: green;
+}
+
+.google_maps_container {
+  width: 100%;
+  height: 370px;
+  z-index: -1000;
+}
+.google_maps_container .form_container {
   display: flex;
   justify-content: center;
-  bottom: 0;
-  margin-left: 9px;
-  margin-top: 10px;
+  width: 1170px;
+  text-align: center;
+  margin: -600px auto 0px auto;
+  position: absolute;
 }
-.contact_us_wrapper .form_container form {
+.google_maps_container .form_container form {
+  z-index: 1000;
   max-width: 770px;
   width: 100%;
+  margin: 0px auto 0px auto;
   background-color: #15141a;
   padding: 37px 95px 40px 66px;
   color: #be8686;
   display: flex;
 }
-.contact_us_wrapper .form_container form .compare {
+.google_maps_container .form_container form .compare {
   margin-left: 19px;
   height: 190px;
 }
-.contact_us_wrapper .form_container form input {
+.google_maps_container .form_container form input {
   width: 300px;
   background-color: #15141a;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 13px 18px 10px 18px;
   margin-top: 21.7px;
 }
-.contact_us_wrapper .form_container form input::placeholder {
+.google_maps_container .form_container form input::placeholder {
   opacity: 0.2;
   color: #ffffff;
   font-family: "source_sans_pro_regular";
@@ -669,6 +755,53 @@ main .product_overview_container h1 {
   text-transform: uppercase;
 }
 
-.colr {
-  background-color: green;
+.footer_wrapper {
+  background-color: #15141a;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+}
+
+footer {
+  width: 100%;
+  padding: 55px 0px 45px;
+}
+footer .footer_content {
+  display: flex;
+  padding-left: 58px;
+}
+footer .footer_content .compare {
+  padding-left: 8px;
+}
+footer .copyright {
+  color: #444348;
+  font-family: "source_sans_pro_semibold";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  padding-top: 14px;
+  text-transform: uppercase;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 32px;
+  color: green;
+  opacity: 0.2;
+}
+.icon:hover {
+  color: #008ed6;
+}
+.icon:nth-child(1) {
+  margin: 1px 0px 0px 32px;
+}
+.icon:nth-child(3) {
+  margin-left: 32px;
+}
+.icon:nth-child(4) {
+  margin-left: 35px;
+}
+.icon:nth-child(5) {
+  margin-left: 36px;
 }

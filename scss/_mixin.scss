@@ -15,6 +15,20 @@
     font-family: 'source_sans_pro_regular'; 
 }
 
+@mixin underline{
+  display: block;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: $blue;
+  position: absolute;
+  text-align: center;
+//   position: relative;
+//   justify-content: center;
+//   margin: 0 auto;
+  left: 32%;
+}
+
 @mixin circle {
     width: 89px;
     height: 89px;
