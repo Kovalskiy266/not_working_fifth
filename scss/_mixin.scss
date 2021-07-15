@@ -1,11 +1,5 @@
 @import "colors";
 @mixin text {
-    // font-weight: 700;
-    // font-style: normal;
-    // letter-spacing: normal;
-    // text-align: left;
-    // display: flex;
-    // text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
@@ -23,9 +17,6 @@
   background-color: $blue;
   position: absolute;
   text-align: center;
-//   position: relative;
-//   justify-content: center;
-//   margin: 0 auto;
   left: 32%;
 }
 
@@ -60,7 +51,7 @@
         color: $black;
         letter-spacing: 0px; 
         line-height: 20px;
-        font-family:  "source_sans_pro_semibold";
+        font-family:"source_sans_pro_semibold";
     }
 
 
@@ -103,23 +94,16 @@
 @mixin download_button {
     background-color: $blue;
     box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
-    // padding: 15px 22px 0px 23px;
-    // padding: 15px 22px 0px 16px;
     padding: 15px 30px 0px 28px;
-    // box-sizing: border-box;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
-    // text-align: center;
     text-transform: uppercase;
     font-family:  'source_sans_pro_regular';
 }
 
 @mixin view_button {
         border: 1px solid rgba(255, 255, 255, 0.2);
-        // text-align: center;
-        // padding: 20px 31px 0px 31px;
-        // padding: 20px 31px 8px 10px;
         padding: 14px 31px 13px 27px;
         color: $white;
         margin-left: 20px;
@@ -130,5 +114,4 @@
         text-transform: uppercase;
         box-sizing: border-box;
         font-family:  'source_sans_pro_regular';
-        // border: 1px solid rgba(255, 255, 255, 0.2);
 }

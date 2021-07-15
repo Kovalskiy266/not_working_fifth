@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Fifth layout</title>
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -13,20 +14,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src = "js/slick.min.js"></script>
     <script src = "js/script.js"></script>
 
 </head>
 <body>
     
-    <div class = "wrapper">
-        <img src="images/photo.png" alt="" class="photo">
-          
-                <!-- <img src="images/photo.png" alt="" class="photo"> -->
+    <div class = "header_wrapper">
+        <!-- <img src="images/photo.png" alt="" class="photo"> -->
                 <div class="main_container">
-                    <header class="row no-gutter">
-                    
+                    <header class="row no-gutter header_container">
                     <!----- Логотип -------->
                     <div class="col-2 logo">
                         <span class="l">L</span><span class="u">U</span><span class="cid">cid</span>
@@ -34,21 +32,27 @@
                                 <span class="onepage">ONEPAGE</span> THEME
                             </div>   
                     </div>
+
+                    <div class=" col-1 menu-burger__header">
+                        <span></span>
+                    </div>
+
+                    
                     <!-------- Меню -------->
-                    <nav class="col-6">
-                        <ul>
-                            <li>Home</li>
-                            <li>Features</li>
-                            <li>About</li>
-                            <li>Testimonials</li>
-                            <li>Pricing</li>
-                            <li>Contact</li>
+                    <nav class="col-6 header__nav">
+                        <ul class="menu header__menu">
+                            <li><a href="" class="menu__item">Home</a></li>
+                            <li><a href="" class="menu__item">Features</a></li>
+                            <li><a href="" class="menu__item">About</a></li>
+                            <li><a href="" class="menu__item">Testimonials</a></li>
+                            <li><a href="" class="menu__item">Pricing</a></li>
+                            <li><a href="" class="menu__item">Contact</a></li>
                         </ul>
                     </nav>
 
                     <!-- ---------Опис хедеру------------>
                     <div class="row no-gutter header_content">
-                        <div class="col-6 description_header"><h6>introducing lucid theme</h6>
+                        <div class="col-xl-6 col-lg-6 col-md-12 description_header"><h6>introducing lucid theme</h6>
                             <h1>Carefully crafted and beautiful landing page.</h1>
                                 <p><span>Etiam ullamcorper et turpis eget hendrerit. Praesent varius risus</span><span>mi, at elementum magna ultricies accumsan. Cras venenatis</span>lacus sed dolor placerat tempus. Morbi blandit at neque ut <span>imperdiet.</span></p>
                                 <div class="button">
@@ -87,7 +91,7 @@
  
                 <div class="row no-gutter">
                     <!-- ----------------------------------------- -->
-                        <div class=" col-3 product_element">
+                        <div class="col-xl-3 col-md-6 product_element">
                             <div class="circle left">
                                 <img src="images/icons/Monitor.png" alt="">
                             </div>
@@ -97,7 +101,7 @@
                             </div>   
                         </div>
                         <!-- ----------------------------------------- -->
-                                <div class="col-3 product_element">
+                                <div class="col-xl-3 col-md-6 product_element">
                                     <div class="circle">
                                     <img src="images/icons/Settings.png" alt="">
                                 </div> 
@@ -107,7 +111,7 @@
                                 </div>      
                                 </div>
 
-                                <div class="col-3 product_element">
+                                <div class="col-xl-3 col-md-6 product_element">
                                     <div class="circle">
                                         <img src="images/icons/Like.png" alt="">
                                     </div>
@@ -117,7 +121,7 @@
                                     </div>       
                                 </div>
 
-                        <div class="col-3 product_element">
+                        <div class="col-xl-3 col-md-6 product_element">
                             <div class="circle right">
                                 <img src="images/icons/Phone.png" alt="">
                             </div>
@@ -135,23 +139,23 @@
                 <!-----------Друга частина контенту------------->
                 <div class="detalis_wrapper">
                     <div class="main_container">
-                        <div class="row second_part">
-                            <div class="col-5 no-gutter">
+                        <div class="row second_part no-gutter">
+                            <div class="col-xl-5 col-lg-5 col-md-12">
                                 <img src="images/second_device.png" alt="" title="" class="device_img"> 
                             </div>
                             <!-- <div class="col-1 no-gutter"></div> -->
-                            <div class="col-7 detalis_description">
+                            <div class="col-xl-7 col-lg-7 col-md-12 detalis_description">
                                 <h6>dip into the details</h6>
                                 <h1>Beautiful on every device</h1>
                                 <div class="line">
                                     <span class="lines"></span><span class="lines"></span>
                                 </div>
                                 <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non&nbsp;  mauris vitae erat consequat auctor eu in elit. </p>
-                                <div>
-                                    <span><img src="images/icons/Cup.png" alt="" title=""><span>Awesome design</span></span>
-                                    <span><img src="images/icons/Mouse.png" alt="" title="" class="mouse_img"><span>&nbsp;Fully responsive</span></span>
-                                    <span class="energy_img"><img src="images/icons/Energy.png" alt="" title="" class="energy_img"><span>&nbsp;Retina ready</span></span>
-                                    <span><img src="images/icons/Speedometer.png" alt="" title=""><span>Tons of features and easy to use</span></span>
+                                <div class="description_device_container">
+                                    <div class="description_device"><img src="images/icons/Cup.png" alt="" title=""><span>Awesome design</span></div>
+                                    <div class="description_device"><img src="images/icons/Mouse.png" alt="" title="" class="mouse"><span>&nbsp;Fully responsive</span></div>
+                                    <div class="description_device"><img src="images/icons/Energy.png" alt="" title="" class="energy"><span>&nbsp;Retina ready</span></div>
+                                    <div class="description_device"><img src="images/icons/Speedometer.png" alt="" title=""><span>Tons of features and easy to use</span></div>
                                 </div>
                             </div>
                             </div>
@@ -162,7 +166,7 @@
                     <div class="detalis_wrapper background left_wrapper">
                         <div class="main_container">
                             <div class="row no-gutter thirth_part">
-                                <div class="col-5 second_detalis_description">
+                                <div class="col-xl-5 col-lg-5 col-md-12 second_detalis_description">
                                     <h6>dip into the details</h6>
                                     <h1>Super easy to <span>customize</span></h1>
                                     <div class="line">
@@ -170,7 +174,7 @@
                                     </div>
                                     <p>Duis sed odio sit amet&nbsp;nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt <span>auctor a ornare odio. Sed non  mauris vitae erat consequat</span> auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                 </div>
-                                <div class="col-7 no-gutter">
+                                <div class="col-xl-7 col-lg-7 col-md-12 no-gutter">
                                     <img src="images/thirth_device.png" alt="" title="" >
                                 </div>
 
@@ -184,7 +188,7 @@
                         <div class="main_container">
                             <div class="slider_container">
                                 <!-- ----------title-------------- -->
-                                <div class="row title_slider no-gutter">
+                                <div class="row title_slider">
                                     <h6>quality has its price</h6>
                                     <h1>Pricings & Plans</h1>
                                     <div class="line">
@@ -192,15 +196,15 @@
                                     </div>
                                 </div>
                                 <!-----------this is a slider-------------->
-                                <div class="row slider">
-                                    <div class="col-6 slide">
+                                <!-- <div class="row slider">
+                                    <div class="col-xl-6 col-lg-6 col-md-9 slide">
                                         <p>Once upon a time all the Rivers combined to protest against the action of the Sea in making their waters salt. “When we come to you,” said they to the Sea.</p>
                                         <div class="author">
                                             <img src="images/icons/john_doe.png" alt="">   
                                             <span>John Doe<span class="name">CEO, THE RIVERS COMPANY</span></span>    
                                         </div>
                                     </div>
-                                    <div class="col-6 slide second_slide">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 slide second_slide">
                                      
                                             <p>A shoe is not only a design, but it's a part of your body language, the way you walk. The way you're going to move is quite dictated by your shoes.</p>
                                             <div class="author">
@@ -210,7 +214,7 @@
                                     </div>
                                     </div>
 
-                                    <div class="col-6 slide">
+                                    <div class="col-xl-6 col-lg-6 col-md-9 slide">
                                         <p>Once upon a time all the Rivers combined to protest against the action of the Sea in making their waters salt. “When we come to you,” said they to the Sea.</p>
                                         <div class="author">
                                             <img src="images/icons/john_doe.png" alt="">   
@@ -218,12 +222,12 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-6 slide second_slide">
+                                    <div class="col-xl-6 col-lg-6 col-md-9 slide second_slide">
                                      
                                         <p>A shoe is not only a design, but it's a part of your body language, the way you walk. The way you're going to move is quite dictated by your shoes.</p>
                                         <div class="author">
                                             <img src="images/icons/dean_winchester.png" alt="" title="">
-                                            <span>Dean Winchester<span class="name">UX DESIGNER, GOOGLE INC.</span></span>
+                                            <span>Dean Winchester<span class="name">UX DESIGNER, GOOGLE INC.</span></span> -->
                             
                                 </div>
                                 </div>
@@ -238,16 +242,25 @@
 <!-- ------------------------------------- -->
 <div class="addition_slider_wrapper">
     <div class="main_container">
-        <div class="addition_slider_content">
-            <span>Like what you see?</span>
-            <span class="get_theme">Get this great theme now!</span>
-            <div class="button_container">
-                <div class="view_button">view features</div>
-                <div class="download_button">download now</div>
+        <div class="row">
+            <div class="col-xl-7 col-lg-7 col-md-12 addition_slider_content">
+                <span>Like what you see?</span>
+                <span class="get_theme">Get this great theme now!</span>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-12">
+                <div class="button_container">
+                    <div class="view_button">view features</div>
+                    <div class="download_button"> download now</div>
+                    </div>
+                <!--<div class="view_button">view features</div>
+                
+                <div class="download_button">download now</div> -->
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+
 <!---------------------------------------------------- -->
 <div class="wrapper">
     <div class="main_container">
@@ -259,8 +272,96 @@
                 <span class="lines"></span><span class="lines"></span>
             </div>
         </div>
+
+    <div class="row content no-gutter">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 compare">
+        <div class="price_list_element">
+            <div class="type">free</div>
+            <div class="price">
+                <div>
+                    <sup class="dollars">$</sup><span class="number">0</span>
+                    </div>
+                <span class="inscription">/per month</span>
+            </div>
+            <div class="compare_text description">
+                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
+                <div class="order_button">order now</div>   
+            </div>
+        </div>
+    </div>
+     <!-- -------------------------------------------------->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 compare">
+        <div class ="price_list_element">
+            <!-- <div class="price_list_element"> -->
+                <div class="type">personal</div>
+                <div class="price">
+                    <div>
+                        <sup class="dollars">$</sup><span class="number">25</span>
+                        </div>
+                    <span class="inscription">/per month</span>
+                </div>
+                <div class="description">
+                    <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
+                    <div class="order_button">order now</div>   
+                </div>
+            </div>
+    </div>
+    
+
+     <!-- -------------------------------------------------->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 ">
+        <div class ="price_list_element compare">
+            <!-- <div class="price_list_element"> -->
+                <div class="type">business</div>
+                <div class="price">
+                    <div>
+                        <sup class="dollars">$</sup><span class="number">50</span>
+                        </div>
+                    <span class="inscription">/per month</span>
+                </div>
+                <div class="description">
+                    <p>&nbsp;Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non &nbsp;ipsum <span>lacinia</span> consectetur.<p>
+                    <div class="order_button">order now</div>   
+                </div>
+            </div>
+    </div>
+    
+     <!-- -------------------------------------------------->
+     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="price_list_element compare">
+            <div class="type ultimate_compare">ultimate</div>
+            <div class="price">
+                <div>
+                    <sup class="dollars">$</sup><span class="ultimate_compare number">99</span>
+                    </div>
+                <span class="inscription">/per month</span>
+            </div>
+            <div class="description">
+                <p>&nbsp;Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non &nbsp;ipsum <span>lacinia</span> consectetur.<p>
+                <div class="order_button">order now</div>   
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- <div class="wrapper">
+    <div class="main_container">
+        <div class="row price_list_container colr">
+        <div class="col title">
+            <h6>quality has its price</h6>
+            <h1>Pricings & Plans</h1>
+            <div class="line">
+                <span class="lines"></span><span class="lines"></span>
+            </div>
+        </div> -->
         <!-- -------------------------------------------------- -->
-            <div class="row content no-gutter">
+            <!-- <div class="row content no-gutter">
                 <div class="col-3 compare">
                     <div class="price_list_element">
                         <div class="type">free</div>
@@ -272,14 +373,13 @@
                         </div>
                         <div class="description">
                             <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum <span>lacinia</span> consectetur.<p>
-                            <div class="order_button">order now</div>   
+                            <div class="order_button"><span>order now</span></div>   
                         </div>
                     </div>
-                </div>
+                </div> -->
                  <!-- -------------------------------------------------->
-                <div class="col-3 compare">
+                <!-- <div class="col-3 compare">
                     <div class ="price_list_element">
-                        <!-- <div class="price_list_element"> -->
                             <div class="type">personal</div>
                             <div class="price">
                                 <div>
@@ -292,13 +392,12 @@
                                 <div class="order_button">order now</div>   
                             </div>
                         </div>
-                </div>
+                </div> -->
                 
 
                  <!-- -------------------------------------------------->
-                <div class="col-3">
-                    <div class ="price_list_element compare">
-                        <!-- <div class="price_list_element"> -->
+                <!-- <div class="col-3">
+                    <div class ="price_list_element">
                             <div class="type">business</div>
                             <div class="price">
                                 <div>
@@ -311,15 +410,15 @@
                                 <div class="order_button">order now</div>   
                             </div>
                         </div>
-                </div>
+                </div> -->
                 
                  <!-- -------------------------------------------------->
-                 <div class="col-3">
-                    <div class="price_list_element compare">
-                        <div class="type">ultimate</div>
+                 <!-- <div class="col-3">
+                    <div class="price_list_element">
+                        <div class="type ultimate_compare"><span>ultimate</span></div>
                         <div class="price">
                             <div>
-                                <sup class="dollars">$</sup><span class="number">99</span>
+                                <sup class="dollars">$</sup><span class="ultimate_compare number">99</span>
                                 </div>
                             <span class="inscription">/per month</span>
                         </div>
@@ -328,12 +427,13 @@
                             <div class="order_button">order now</div>   
                         </div>
                     </div>
+                    </div>
                 </div>
 
             </div>
-        </div>
+        
     </div>
-</div>
+</div> -->
 
 <div class="contact_us_wrapper">
     <div class="main_container">
@@ -372,16 +472,68 @@
             </div>
                     <!-- </div> -->
             </div>
-        </div>
-       
+            </div>
+            <div class="row form">
+                <div class="col-2"></div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="form-contacts-outer">
+                        <div class="form-contacts">
+                            <form action="" method="post">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="form-controls">
+                                                    <input type="text" class="form-control" name="field-contacts-name" id="field-contacts-name" value="" placeholder="Name *">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">                
+                                                <div class="form-controls">
+                                                    <input type="text" class="form-control" name="field-contacts-email" id="field-contacts-email" value="" placeholder="Email *">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                               
+                                                
+                                                <div class="form-controls">
+                                                    <input type="text" class="form-control" name="field-contacts-subject" id="field-contacts-subject" value="" placeholder="Subject *">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                
+                                                <div class="form-controls">
+                                                    <textarea class="form-control" name="field-contacts-message" id="field-contacts-message" placeholder="Message *"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+            </div>
+            </div>
+       </div>
 </div>
 </div>
-<div class="wrapper">
+<div class="google_maps_wrapper">
     <div class="google_maps_container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1510.7731085462829!2d-80.19072394834916!3d25.76249442219364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7ea6472a221%3A0xc8fa6bf8ce467740!2sReed%20Smith%20LLP!5e0!3m2!1sru!2sua!4v1625846381157!5m2!1sru!2sua" width="100%" height="371" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <!-- <div class="main_container"> -->
-        <!-- <div class="main_container"> --> -->
-            <div class="row no-gutter form_container">
+        <!-- <div class="main_container"> -->
+            <!-- <div class="row no-gutter form_container">
             <div class="col-12">
                 <div class="col-8">
                     <form>
@@ -395,14 +547,14 @@
                         <div>
                             <input type="text" placeholder = "message*" name="first_name" class="input compare">
                         </div> 
-                    </form>
+                    </form> -->
                 <!-- </div>   -->
-                </div>
+                <!-- </div> -->
     </div>
     </div>
 
-</div>
-</div>
+<!-- </div> -->
+<!-- </div> -->
 
 <div class="footer_wrapper">
     <div class="main_container">
@@ -425,6 +577,8 @@
         </footer>
 
     </div>
+    <!-- <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
 </div>
 </body>
 </html>
