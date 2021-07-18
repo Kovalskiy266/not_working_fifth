@@ -132,6 +132,10 @@
   padding-left: 12px;
   box-sizing: border-box;
 }
+.slider_wrapper .slider img {
+  width: 59px;
+  height: 59px;
+}
 .slider_wrapper .slider .slide p {
   max-width: 560px;
   width: 100%;
@@ -165,9 +169,6 @@
 }
 .slider_wrapper .slider .second_slide p {
   margin: 0px;
-}
-.slider_wrapper .slider .second_slide .author {
-  padding-left: 12px;
 }
 .slider_wrapper .slider .second_slide .author span {
   margin-left: 2px;

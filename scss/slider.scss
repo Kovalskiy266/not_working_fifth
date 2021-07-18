@@ -83,8 +83,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include wrapper;
-    // overflow: hidden;
-    // overflow-x: hidden;
     .slider_container {
         padding: 46px 0px 60px 0px;
         height: 640px;
@@ -119,7 +117,6 @@
         height: 100%;
         justify-content: center;
         box-sizing: border-box;
-
         .slick-track {
             display: flex;
             flex-direction: row;
@@ -128,8 +125,9 @@
             padding-left: 12px;
             box-sizing: border-box;
         }
-        .slick-list{
-            // padding-left: 0px;
+        img{
+            width: 59px;
+            height: 59px;
         }
 
         .slide{
@@ -152,7 +150,6 @@
             margin-top: 22px;
             overflow: hidden;
             width: 50%;
-            // margin-left: -3px;
             span{
                 padding: 4px 0px 0px 24px;
                 color: $white;
@@ -175,10 +172,8 @@
             // width: 100%;
             p{
                 margin: 0px;
-                // padding-left: 12px;
             }
             .author{
-                padding-left: 12px;
                 span {
                     margin-left: 2px;
                     // padding-left: 27px;

@@ -23,6 +23,7 @@ body {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .overview_wrapper {
@@ -68,19 +69,15 @@ body {
   width: 100%;
   text-indent: 0;
   margin-top: 25px;
+  margin-bottom: 27px;
   letter-spacing: 0.29px;
 }
-.detalis_wrapper .device_img {
-  width: 510px;
-  height: auto;
-  margin-right: -15px;
-}
-.detalis_wrapper .detalis_description {
+.detalis_wrapper .second_part .detalis_description {
   display: flex;
   flex-direction: column;
   padding: 33px 0px 0px 83px;
 }
-.detalis_wrapper .detalis_description .line {
+.detalis_wrapper .second_part .detalis_description .line {
   position: relative;
   flex-direction: row;
   display: flex;
@@ -89,38 +86,43 @@ body {
   width: 42px;
   padding: 0px;
 }
-.detalis_wrapper .detalis_description .line .lines {
+.detalis_wrapper .second_part .detalis_description .line .lines {
   width: 20px;
   display: flex;
   border-bottom: 2px solid #008ed6;
 }
-.detalis_wrapper .detalis_description .description_device_container .description_device {
+.detalis_wrapper .second_part .detalis_description .description_device_container .description_device {
   display: flex;
   flex-direction: row;
   font-size: 18px;
   color: #1b1b1b;
   font-family: "source_sans_pro_regular";
+  line-height: 35px;
 }
-.detalis_wrapper .detalis_description .description_device_container .description_device img {
+.detalis_wrapper .second_part .detalis_description .description_device_container .description_device img {
   height: 17px;
   display: block;
-  margin-left: -1px;
-  margin-top: 5px;
+  margin-left: -3px;
+  margin-top: 10px;
   margin-right: 9px;
 }
-.detalis_wrapper .detalis_description .description_device_container .description_device .mouse {
+.detalis_wrapper .second_part .detalis_description .description_device_container .description_device .mouse {
   margin-left: 3px;
 }
-.detalis_wrapper .detalis_description .description_device_container .description_device .energy {
+.detalis_wrapper .second_part .detalis_description .description_device_container .description_device .energy {
   margin-left: 1px;
 }
-.detalis_wrapper .detalis_description .description_device_container span {
+.detalis_wrapper .second_part .detalis_description .description_device_container span {
   margin: 0px 0px 0px 0px;
 }
-.detalis_wrapper .detalis_description .description_device_container div {
+.detalis_wrapper .second_part .detalis_description .description_device_container div {
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
+}
+.detalis_wrapper .second_part .device_img {
+  width: 510px;
+  height: auto;
+  margin-left: -12px;
 }
 .detalis_wrapper .second_detalis_description {
   padding: 66px 0px 0px 11.5px;
@@ -297,7 +299,7 @@ header nav .header__menu li:hover::after {
   margin-left: 0;
 }
 
-body .wrapper .main_container .no-gutter, body .overview_wrapper .main_container .no-gutter, body .detalis_wrapper .main_container .no-gutter, body .header_wrapper .main_container .no-gutter {
+body .wrapper .main_container .no-gutter, body .overview_wrapper .main_container .no-gutter, body .detalis_wrapper .main_container .no-gutter, body .header_wrapper .main_container .no-gutter, body .contact_us_wrapper .main_container .no-gutter {
   margin: 0;
   padding-left: 0px;
   padding-right: 0px;
@@ -677,23 +679,33 @@ main .product_overview_container .line .lines {
 }
 
 .contact_us_wrapper {
-  width: 100%;
+  width: auto;
   background-color: #ededed;
   padding-top: 40px;
-  height: 700px;
   z-index: -1000;
+  box-sizing: border-box;
+}
+.contact_us_wrapper .contact_us_container {
+  width: 100%;
+  min-height: 678px;
+}
+.contact_us_wrapper .form {
+  display: flex;
+  justify-content: center;
+  margin-left: -3px;
 }
 .contact_us_wrapper .form .form-contacts-outer {
   position: relative;
   z-index: 50;
   box-sizing: border-box;
+  width: 770px;
 }
 .contact_us_wrapper .form .form-contacts {
   position: absolute;
   left: 0;
-  top: 42px;
+  top: 67px;
   width: 100%;
-  padding: 85px 72px 40px 65px;
+  padding: 60px 72px 20px 67px;
   background: #15141a;
   box-sizing: border-box;
 }
@@ -704,24 +716,49 @@ main .product_overview_container .line .lines {
   background: transparent;
   border-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.2);
+  font-family: "source_sans_pro_regular";
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.2;
+  font-size: 14px;
 }
 .contact_us_wrapper .form .form-contacts textarea.form-control {
+  max-width: 300px;
+  width: 100%;
   height: 190px;
   margin-left: -10px;
+  padding: 13px 0px 0px 20px;
 }
 .contact_us_wrapper .form .form-contacts .form-control:focus {
   border-color: #fff;
   color: #fff;
 }
-.contact_us_wrapper .form .form-contacts .has-error .form-controls > * {
-  border-color: #f00;
-}
 .contact_us_wrapper .form .form-contacts .form-actions {
   text-align: right;
 }
-.contact_us_wrapper .form .form-contacts input {
+.contact_us_wrapper .form .form-contacts .form-control input {
   width: 99%;
-  padding: 12px;
+  padding: 13px 12px 13px 15px;
+  margin-bottom: 20px;
+}
+.contact_us_wrapper .form .form-contacts .form-control .form_button_submit_container {
+  text-align: center;
+}
+.contact_us_wrapper .form .form-contacts .form-control .form_button_submit_container .form_button_submit {
+  background-color: #008ed6;
+  box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
+  padding: 15px 30px 0px 28px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "source_sans_pro_regular";
+  padding: 14.5px 1px 14.5px 0px;
+  border: none;
+  letter-spacing: 0.3px;
+  width: 76%;
+  margin-left: 25px;
+  border-radius: 3px;
 }
 .contact_us_wrapper .title {
   text-align: center;
@@ -758,12 +795,11 @@ main .product_overview_container .line .lines {
   display: flex;
   border-bottom: 2px solid #008ed6;
 }
-.contact_us_wrapper .contact_element {
-  text-align: center;
+.contact_us_wrapper .title .contact_element {
   display: flex;
   flex-direction: column;
 }
-.contact_us_wrapper .contact_element span {
+.contact_us_wrapper .title .contact_element span {
   font-family: "source_sans_pro_regular";
   display: block;
   font-size: 18px;
@@ -771,42 +807,46 @@ main .product_overview_container .line .lines {
   font-weight: 400;
   color: #999999;
 }
-.contact_us_wrapper .phone_element {
-  margin: 0 auto;
-  padding: 58px 0px 0px 4px;
+.contact_us_wrapper .title .phone_element {
+  padding: 58px 0px 0px 0px;
+  text-align: left;
 }
-.contact_us_wrapper .phone_element img {
+.contact_us_wrapper .title .phone_element .compare {
+  text-indent: 10px;
+}
+.contact_us_wrapper .title .phone_element div {
+  padding-right: 20px;
+  text-align: center;
+}
+.contact_us_wrapper .title .phone_element div img {
   width: 18px;
   height: 32px;
   margin: 0px auto 30px;
 }
-.contact_us_wrapper .pointer_element {
-  margin: 0 auto;
-  padding: 58px 0px 0px 24px;
+.contact_us_wrapper .title .pointer_element {
+  text-align: center;
+  padding: 58px 0px 0px 0px;
 }
-.contact_us_wrapper .pointer_element img {
+.contact_us_wrapper .title .pointer_element img {
   width: 24px;
   height: 32px;
   margin: 0px auto 30px;
 }
-.contact_us_wrapper .mail_element {
-  margin: 0 auto;
-  padding: 63px 0px 0px 42px;
+.contact_us_wrapper .title .mail_element {
+  text-align: center;
+  padding: 63px 0px 0px 0px;
 }
-.contact_us_wrapper .mail_element img {
+.contact_us_wrapper .title .mail_element img {
   width: 32px;
   height: 22px;
   margin: 0px auto 30px;
 }
-.contact_us_wrapper .mail_element span {
-  text-indent: -25px;
-  padding-top: 2px;
-}
-
-.google_maps_wrapper {
+.contact_us_wrapper .title .mail_element span {
   width: 100%;
+  padding-top: 2px;
+  text-align: center;
 }
-.google_maps_wrapper .google_maps_container {
+.contact_us_wrapper .title .google_maps_container {
   width: 100%;
   height: 370px;
 }
@@ -824,7 +864,8 @@ footer {
 }
 footer .footer_content {
   display: flex;
-  padding-left: 58px;
+  justify-content: center;
+  padding-right: 45px;
 }
 footer .footer_content .compare {
   padding-left: 8px;
@@ -872,32 +913,28 @@ footer .copyright {
     transition: all 0.4s ease;
     text-align: center;
     left: -100%;
+    background-color: #15141a;
   }
 
   .header__nav.open-menu {
     left: 0;
     width: 100%;
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .header__nav .header__menu {
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin: 0px;
     padding: 0px;
+    float: none;
   }
   .header__nav .header__menu li {
     margin: 20px auto 20px auto;
     font-size: 18px;
     font-weight: bold;
     width: 100%;
-    opacity: 1;
     border-bottom: 2px solid #008ed6;
-  }
-
-  .header__menu li a {
-    opacity: 100;
   }
 
   .menu-burger__header {
@@ -905,13 +942,14 @@ footer .copyright {
     width: 100%;
     height: 35px;
     display: block;
+    margin-right: 30px;
   }
 
   .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before {
     height: 3px;
     width: 100%;
     position: absolute;
-    background: #515758;
+    background: #ffffff;
     margin: 0 auto;
   }
 
@@ -929,6 +967,18 @@ footer .copyright {
 
   .menu-burger__header:before {
     top: 5px;
+  }
+
+  .contact_us_wrapper {
+    min-height: 1200px;
+  }
+  .contact_us_wrapper .form .form-contacts {
+    padding: 40px;
+  }
+  .contact_us_wrapper .form .form-contacts textarea.form-control {
+    max-width: 449px;
+    width: 100%;
+    margin-left: 0px;
   }
 }
 @media (max-width: 1200px) {
@@ -950,13 +1000,17 @@ footer .copyright {
   .content .price_list_element {
     margin: 30px;
   }
+
+  footer .footer_content {
+    padding-left: 0px;
+  }
 }
-@media (max-width: 1200px) and (max-width: 600px) {
+@media (max-width: 600px) {
   .header_content img {
     display: none;
   }
 }
-@media (max-width: 1200px) and (max-width: 992px) {
+@media (max-width: 992px) {
   .header_wrapper .main_container header {
     padding-left: 30px;
   }
@@ -1012,8 +1066,7 @@ footer .copyright {
     width: 100%;
     height: auto;
   }
-}
-@media (max-width: 1200px) {
+
   .addition_slider_wrapper .button_container {
     float: none;
     justify-content: center;
@@ -1025,7 +1078,16 @@ footer .copyright {
     font-size: 24px;
     float: none;
   }
+
+  .slider_wrapper .slider_container .slider {
+    flex-direction: column;
+  }
 }
+.contact_us_wrapper .form .form-contacts-outer {
+  max-width: 700px;
+  width: 100%;
+}
+
 @media (max-width: 400px) {
   .addition_slider_wrapper .button_container {
     flex-direction: column;
@@ -1044,4 +1106,7 @@ footer .copyright {
   .price_list_container .title {
     padding-bottom: 10px;
   }
+}
+.container_content {
+  width: 100%;
 }
