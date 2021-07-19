@@ -24,7 +24,8 @@
     width: 89px;
     height: 89px;
     border-radius: 50%;
-    background-color: red;
+    background-color: $white;
+    border: 1px solid $strong_lite_gray;
     position: relative;
     align-self: center;
     justify-self: center;
@@ -46,8 +47,8 @@
     
 }
 
-@mixin title_description {
-        font-size: 36px;
+@mixin title_description($font-size) {
+        font-size: $font-size;
         color: $black;
         letter-spacing: 0px; 
         line-height: 20px;
@@ -59,7 +60,7 @@
         font-family: "source_sans_pro_light";
         line-height: 26px;
         letter-spacing: 0.21px;
-        color: brown;
+        color: $gray;
         text-indent: -4.1px;   
         font-size: 18px; 
     }
