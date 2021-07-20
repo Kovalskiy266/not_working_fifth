@@ -1,84 +1,35 @@
 @import "mixin";
-/* Слайдер */
  .slick-slider{
     display: flex;
-    // overflow: hidden;
 }
-/* Слайдер запущен */
-.slider.slick-initialized{}
-/* Слайдер с точками */
-.slick-slider.slick-dotted{}
-/* Ограничивающая оболочка */
+
 .slider .slick-list {
-    padding: 0px;
-}
-/* Лента слайдов */
-.slick-track{
-    display: flex;
-}
-/* Слайд */
-.slick-slide{
-    // width: 50%;
-}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active{}
-/* Слайд основной */
-.slick-slide.slick-current{}
-/* Слайд по центру */
-.slick-slide.slick-center{}
-/* Клонированный слайд */
-.slick-slide.slick-cloned{}
-/* Стрелка */
-.slick-arrow{}
-/* Стрелка влево */
-.slick-arrow.slick-prev{}
-/* Стрелка вправо */
-.slick-arrow.slick-next{}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled{}
-/* Точки (булиты) */
-.slider .slick-dots{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    width: 100%;
+    padding: 0;
 }
 
 .slick-dots{
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 5px;
-    margin-top: 131px;
-    width: 137px;
+    justify-content: center;
     button{
       font-size: 0;
       width: 8px;
       height: 8px;
       background-color: transparent;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid $border_gray;
       padding: 0;
-      margin-left: 16px;
-      &:nth-child(2){
-          margin-left: 21px;
-      }
-      &:nth-child(3){
-          margin-left: 7px;
-      }
     }
     .slick-active button{
-      background-color: #ffffff;
+      background-color: $white;
       width: 13px;
       height: 13px;
       border: 0;
-    //   position: absolute;
     }
   }
 
-
-.slider_wrapper{
+.section-testimonials-slider{
     background-image: url("../images/slider.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,33 +40,26 @@
         width: 100%;
         margin: 0 auto;
         overflow: hidden;
-        padding: 0px;
+        padding: 0;
         .slider_container { 
-            padding: 46px 0px 60px 0px;
+            padding: 46px 0 60px 0;
             height: 640px;
             width: 100%;
             overflow: hidden;
             .title_slider{
                 text-align: center;
-                h6{
-                    @include blue_title;
-                }
                 h1{
-                    @include title_description(36px); 
                     color: $white; 
-                }
+                };
                 .line{
-                    @include line_container;
-                    margin: 30.4px auto 0px auto;
-                    .lines{
-                        @include lines;
-                    }
+                    margin: 38px auto 0 auto;
                 }
+            }
+            li{
+                margin: 10px 10px 0;
             }
         }
         .slider{
-            // max-width: 1170px;
-            // width: 100%;
             position: relative;
             overflow-x: hidden;
             padding-top: 86px;
@@ -135,17 +79,14 @@
             img{
                 width: 59px;
                 height: 59px;
+                margin-top: 1px;
             }
-
             .slide{
-                // max-width: 1170px;
-                // width: 100%;
                 p{
                     max-width: 560px;
                     width: 100%;
                     font-size: 24px;
                     font-weight: 400;
-                    // margin-left: -12px;
                     color: $white;
                     line-height: 32px;
                     text-align: left;
@@ -157,7 +98,7 @@
                 margin-top: 22px;
                 width: 100%;
                 span{
-                    padding: 4px 0px 0px 24px;
+                    padding: 4px 0 0 24px;
                     color: $white;
                     font-family: "source_sans_pro_regular";
                     font-size: 16px;
@@ -167,28 +108,42 @@
                     .name{
                         font-size: 14px;
                         font-weight: 700;
-                        padding: 5px 0px 0px 0px;
+                        padding: 5px 0 0 0;
                         letter-spacing: 0.4px;
-        
                     }
                 }
             }
             .second_slide{
-                // max-width: 1170px;
-                // width: 100%;
-                p{
-                    margin: 0px;
+                img{
+                    margin-left: 2px;
                 }
-                .author{
-                    span {
-                        margin-left: 2px;
-                        // padding-left: 27px;
-                    }
             }
-            
         }
     }
-    }
 }
+@media(max-width:1200px){
+    .section-testimonials-slider{
+        .container{
+            .slider_container{
+                .title_slider{
+                    h1{
+                        color: $white;
+                    }
+                }
+                .slider{
+                    padding-top: 30px;
+                    .slide{
+                            p{
+                                max-width: 800px;
+                                width: 100%;
+                            }
+                            padding: 30px;
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    
 
 

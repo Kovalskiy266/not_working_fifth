@@ -1,0 +1,152 @@
+.section-contacts {
+    .contact_us_container{
+        width: 100%;
+        min-height: 678px;
+    }
+    margin-bottom: 0;
+    width: auto;
+    background-color: $light_gray;
+    padding-top: 40px;
+    z-index: -10;
+    box-sizing: border-box;
+    .form{
+        display: flex;
+        justify-content: center;
+         margin-left: -3px;
+        .form-contacts-outer {
+            position: relative;
+            z-index: 1; 
+            box-sizing: border-box;
+             width: 770px;
+        }
+        .form-contacts { 
+            position: absolute;
+            left: 0;
+            top: 68px;
+            width: 100%;
+            padding: 60px 72px 40px 67px;
+            background: $dark_black;
+            box-sizing: border-box;
+            width: 770px;
+            .form-group { 
+            margin-bottom: 20px; 
+            }
+            .form-control{ 
+                background: transparent;
+                border-color: $border_gray;
+                color: $border_gray;
+                text-transform: uppercase;
+                font-weight: 700;
+                opacity: 0.2;
+                font-size: 14px;
+                font-family: $regular;
+            }
+            textarea.form-control 
+            { 
+                max-width: 300px; 
+                width: 100%; 
+                height: 190px; 
+                margin-left: -10px; 
+                padding: 13px 0 0 20px ;
+            }
+            .form-control:focus { 
+                border-color: $white;
+                color: $white;
+            }
+            .form-actions { 
+                text-align: right; 
+            }
+            .form-control {
+                padding: 13px 12px 13px 15px;
+                width: 99%;
+                input {
+                    width: 95%;
+                    margin-bottom: 20px;
+                }
+        }
+    }
+            } 
+ 
+    .form_button_submit_container{
+        text-align: center;
+        .form_button_submit{
+            @include download_button;
+            padding: 17px 1px 17px 0;
+            border: none;
+            letter-spacing: 0.3px;
+            width: 76%;
+            margin-right: 13px;
+            margin-left: 0; 
+            border-radius: 3px;
+            &:hover{
+                opacity: 0.5;
+            }
+    }
+}
+
+    .title{
+        text-align: center;
+        margin-top: 1px;
+        .line{
+            margin: 39px auto 0 auto;
+    }
+    .contact_element{
+        display: flex;
+        flex-direction: column;
+        span{
+            font-family:$regular; 
+            display: block;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            color: $gray;  
+        }
+    }
+
+    .phone_element{
+        padding: 58px 0 0 ;
+        text-align: left;
+        text-align: center;
+        span{
+            margin-left: -25px;
+        }
+        div {
+            padding-right: 20px;
+            img {
+                width: 18px;
+                height: 32px;
+                margin: 0 auto 28px;
+            }
+        }
+    }
+    .pointer_element{
+        text-align: center;
+
+        padding: 58px 0 0 0;
+        img {
+            width: 24px;
+            height: 32px;
+            margin: 0 auto 28px;
+        }
+    }
+    .mail_element{
+        text-align: center;
+        padding: 63px 0 0 17px;
+        img {
+            width: 32px;
+            height: 22px;
+            margin: 0 auto 30px;
+        }
+        span{
+            width: 100%;
+            padding-top: 2px;
+            text-align: center;
+            margin-left: -25px;
+        }
+    }
+    .google_maps_container{
+        width: 100%;
+        height: 362px;
+}
+}
+}

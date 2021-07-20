@@ -1,0 +1,49 @@
+.footer_wrapper{
+    background-color: $dark_black;
+    @include wrapper;
+}
+
+footer {
+    width: 100%;
+    padding: 56px 0 23px;
+    z-index: 1;
+    .footer_content{
+        display: flex;
+        justify-content: center;
+        padding-right: 45px;
+        .align {
+            padding-left: 8px;
+        }
+    }
+    .copyright {
+        color: $dark_gray;
+        font-family: $semibold;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 48px;
+        text-align: center;
+        padding-top: 14px;
+        text-transform: uppercase;
+    }
+}
+.icon{
+    font-size: 18px;
+    margin-left: 32px;
+    color: $white;
+    &:hover{
+        color: $blue;
+    }
+    opacity: 0.2;
+    &:nth-child(1){
+        margin: 1px 0 0 32px;
+    }
+    &:nth-child(3){
+        margin-left: 32px;
+    }
+    &:nth-child(4){
+        margin-left: 35px;
+    }
+    &:nth-child(5){
+        margin-left: 36px;
+    }
+}
